@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> JQuery Sample</title>
+		<meta name ="viewport" content ="width = device-width, initial-scale=1">
+		<link rel ="stylesheet" href="css/jquery.mobile-1.4.5.min.css"/>
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+		<style>
+			.has-odd-thumb li a{
+				padding-left: 90px;
+			}
+			.thumbContainer{
+				position: absolute;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				width: 90px;
+				
+			}
+			.thumbContainer img{
+				bottom: 0;
+				left: 0;
+				top: 0;
+				right: 0;
+				margin: auto;
+				position: absolute;
+				max-width: 100px;
+				max-height: 100px;
+			}
+			
+		</style>
+	</head>
+	
+	<body>
+		<div data-role="page" id="main">
+			<div data-role="header" data-position="fixed">
+				<a href="#main" data-icon="home">Home</a>
+				<h1>JualBuku.com</h1>
+				<a href="LogIn.html" data-icon="user">Log In</a>
+				<div data-role="navbar">
+					<ul>
+						<li><a href ="#bookList" data-transtition="slide">Book List</a></li>
+						<li><a href="#Order">Order</a></li>
+						<li><a href=" ">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			<div data-role="content">
+				<ul data-role="content">
+					<li data-role="fieldcontain">
+						<a href=" " style="text-decoration:none"> 
+							<h4>Buku BARU Januari 2015!!!</h4>
+							<img src="img/bukuJanuari.png" style="width: 100%;height:auto;"/>	
+						</a>
+						<p>Buku baru bulan Januari: </p>
+						<ul>
+							<li>Rekayasa Perangkat Lunak</li>
+							<li>Dasar-dasar Manajemen Keuangan</li>
+							<li>Database Systems</li>
+							<li>Komputer Bagi Anak</li>
+							<li>Jaringan Komputer</li>
+							<li>Robot B.E.A.M</li>
+						</ul>
+						<p> 06 Jan, 14:35</p>
+					</li>
+					<li data-role="fieldcontain">
+						<a href=" " style="text-decoration:none"> 
+							<h4>Buku BARU Desember 2014!!!</h4>
+							<img src="img/bukuDesember.png" style="width: 100%;height:auto;"/>
+						</a>
+						<p>Buku baru bulan Januari: </p>
+						<ul>
+							<li>MultiMedia</li>
+							<li>Rahasia Bakat: The Talent Code</li>
+							<li>Web 2.0: How to for Educators</li>
+							<li>Teknologi Komputer Dalam Bisnis</li>
+							<li>76 Trik Rahasia Blogspot</li>
+							<li>Belajar Komputer Edisi Revisi</li>
+						</ul>
+						<p> 23 Desember, 13:25</p>
+					</li>
+					
+				</ul>
+				
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<h4>Meiky W.W. 672010121</h4>
+			</div>
+			
+		</div>
+		<div data-role="page" id="bookList" >
+			<div data-role="header" data-position="fixed">
+				<a href="#main" data-icon="home">Home</a>
+				<h1>Book List</h1>
+				<a href="LogIn.html" data-icon="user">Log In</a>
+				<div data-role="navbar">
+					<ul>
+						<li><a href ="#bookList" data-transtition="slide">Book List</a></li>
+						<li><a href="#Order">Order</a></li>
+						<li><a href=" ">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			<div data-role="content">
+				<ul data-role="listview" data-autodividers="true" class="has-odd-thumb">
+					<li style="padding:2pt"  >
+						<a href="#TRB" > 
+							<div class="thumbContainer"> 
+								<img src="img/bukublog.jpg"/>
+							</div>
+							
+							<h4> 76 Trik Rahasia Blogspot</h4>
+							<p> Jubilee Enterprise</p>
+							<p> kode : </p> <p style="color:red"><b>TRB</b></p>
+							<span class="ui-li-count">Rp. 75rb</span>
+						</a>
+					</li>
+					<li style="padding:2pt">
+						<a href="#BKE"> 
+							<div class="thumbContainer">
+								<img src="img/BelajarKomputer.jpg"/>
+							</div>
+							<h4> Belajar Komputer Edisi Revisi</h4>
+							<p> Haer Talib</p>
+							<p> kode : </p> <p style="color:red"><b>BKE</b></p>
+							<span class="ui-li-count">Rp. 125rb</span>
+						</a>
+					</li>
+					<li style="padding:2pt">
+						<a href="#DDM">
+							<div class="thumbContainer">	
+								<img src="img/dasar-dasarManagemenKeuangan.jpg"/>
+							</div>
+							<h4> Dasar-Dasar Manajemen Keuangan</h4>
+							<p> Brigham Houston</p>
+							<p> kode : </p> <p style="color:red"><b>DDM</b></p>
+							<span class="ui-li-count">Rp. 100rb</span>
+						</a>
+					</li>
+					<li style="padding:2pt">
+						<a href="#DBS"> 
+							<div class="thumbContainer">
+								<img src="img/databaseSystems.jpg"/>
+							</div>
+							<h4> Database Systems</h4>
+							<p> Thomas Connoly dan Carolyn Begg</p>
+							<p> kode : </p> <p style="color:red"><b>DBS</b></p>
+							<span class="ui-li-count">Rp. 175rb</span>
+						</a>
+					</li>
+					<li style="padding:2pt">
+						<a href="#KBA">
+							<div class="thumbContainer">
+								<img src="img/komputerAnak.jpg"/>
+							</div>
+							<h4> Komputer Bagi Anak</h4>
+							<p> Tutang, MM</p>
+							<p> kode : </p> <p style="color:red"><b>KBA</b></p>
+							<span class="ui-li-count">Rp. 75rb</span>
+						</a>
+					</li>
+					<li style="padding:2pt">
+						<a href="#JRK"> 
+							<div class="thumbContainer">
+								<img src="img/langkah-mudah-jarkom.jpg"/>
+							</div>
+							<h4> Jaringan Komputer</h4>
+							<p> Zaenal Arifin</p>
+							<p> kode : </p> <p style="color:red"><b>JRK</b></p>
+							<span class="ui-li-count">Rp. 135rb</span>
+						</a>
+					</li>
+					<li style="padding:2pt">
+						<a href="#MMD"> 
+							<div class="thumbContainer">
+								<img src="img/multimedia.jpg"/>
+							</div>
+							<h4> MultiMedia</h4>
+							<p> Prof. Dr. Munir, M.IT.</p>
+							<p> kode : </p> <p style="color:red"><b>MMD</b></p>
+							<span class="ui-li-count">Rp. 225rb</span>
+						</a>
+					</li>
+					<li style="padding:2pt">
+						<a href="#RBT"> 
+							<div class="thumbContainer">
+								<img src="img/RahasiaBakat.jpg"/>
+							</div>
+							<h4> Rahasia Bakat the Talent Code</h4>
+							<p> Daniel Coyle</p>
+							<p> kode : </p> <p style="color:red"><b>RBT</b></p>
+							<span class="ui-li-count">Rp. 175rb</span>
+						</a>
+					</li>
+					<li style="padding:2pt">
+						<a href="#RPL"> 
+							<div class="thumbContainer">
+								<img src="img/RekayasaPerangkatLunak.png"/>
+							</div>
+							<h4> Rekayasa Perangkat Lunak</h4>
+							<p> Aunur Rofiq Mulyanto, dkk.</p>
+							<p> kode : </p> <p style="color:red"><b>RPL</b></p>
+							<span class="ui-li-count">Rp. 75rb</span>
+						</a>
+					</li>
+					<li style="padding:2pt">
+						<a href="#RBE">
+							<div class="thumbContainer">
+								<img src="img/robotBEAM.jpg"/>
+							</div>
+							<h4> Robot B.E.A.M</h4>
+							<p> Taufiq Dwi Septian Suyadhi</p>
+							<p> kode : </p> <p style="color:red"><b>RBE</b></p>
+							<span class="ui-li-count">Rp. 175rb</span>
+						</a>
+					</li>
+					<li style="padding:2pt">
+						<a href="#TKD"> 
+							<div class="thumbContainer">
+								<img src="img/TeknologiKomputerDalamBisnis.jpg"/>
+							</div>
+							<h4> Teknologi Komputer Dalam Bisnis </h4>
+							<p> Wing Wahyu Winarno</p>
+							<p> kode : </p> <p style="color:red"><b>TKD</b></p>
+							<span class="ui-li-count">Rp. 125rb</span>
+						</a>
+					</li>
+					<li style="padding:2pt">
+						<a href="#WEB"> 
+							<div class="thumbContainer">
+								<img src="img/webHTFE.jpg"/>
+							</div>
+							<h4> Web 2.0 How to for Educators</h4>
+							<p> Gwen Solomon</p>
+							<p> kode : </p> <p style="color:red"><b>WEB</b></p>
+							<span class="ui-li-count">Rp. 105rb</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<h4>Meiky W.W. 672010121</h4>
+			</div>
+		</div>
+		
+		<div data-role="page" id="Order" >
+			<div data-role="header" data-position="fixed">
+				<a href="#main" data-icon="home">Home</a>
+				<h1>Order</h1>
+				<a href="LogIn.html" data-icon="user">Log In</a>
+				<div data-role="navbar">
+					<ul>
+						<li><a href ="#bookList" data-transtition="slide">Book List</a></li>
+						<li><a href="#Order">Order</a></li>
+						<li><a href=" ">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			<div data-role="content">
+				<h3>1. Pemesanan</h3>
+				<p>SMS ke <b>0876 5432 1XXX</b> berisi: <b>Nama Jelas, Alamat Lengkap, & Kode Buku.</b></p>
+				<p><i>Contoh SMS: </i></p><p style="color:blue"> Budi Setiawan - Jl. Budiman no.01 Jakarta - RBT.</p>
+				<h3>2. Transfer</h3>
+				<p>Akan ada SMS balasan berisi Total Harga, Nomor Rekening Bank atas nama Budi Santoso. Jika setuju silakan transfer 1x24 jam. </p>
+				<h3>3. Konfirmasi</h3>
+				<p>Setelah transfer, segera SMS lagi berisi: <b>Nama Anda</b> dan <b>Bank tujuan</b>.</p>
+				<p><i>Contoh SMS: </i></p><p style="color:blue"> Budi Setiawan - MANDIRI. </p><p><i>Selesai.</i></p>
+				
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<h4>Meiky W.W. 672010121</h4>
+			</div>
+		</div>
+		
+		<div data-role="page" id="TRB">
+			<div data-role="header" data-position="fixed">
+				<a href="#main" data-icon="home">Home</a>
+				<h1>76 Trik Rahasia Blogspot</h1>
+				<a href="LogIn.html" data-icon="user">Log In</a>
+				<div data-role="navbar">
+					<ul>
+						<li><a href ="#bookList" data-transtition="slide">Book List</a></li>
+						<li><a href="#Order">Order</a></li>
+						<li><a href=" ">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			<div data-role="content">
+				<div class="ui-grid-a" >
+					<div class="ui-block-a" >
+						<img src="img/bukublog.jpg" style="width:80%;height:auto;"></img>
+					</div>
+					<div class="ui-block-b" style="font-size:10pt">
+						<p><b>Judul:</b></p>
+						<p>76 Trik Rahasia Blogspot</p>
+						<p><b>Stock:</b></p>
+						<p>Tersedia</p>
+						<p><b>Kode:</b></p>
+						 <p style="color:red"><b>TRB</b></p>
+						<p><b>Harga:</b></p>
+						<p>Rp. 75rb</p>
+					</div>
+				</div>
+				
+				
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<h4>Meiky W.W. 672010121</h4>
+				
+			</div>
+		</div>	
+		
+		<div data-role="page" id="TRB">
+			<div data-role="header" data-position="fixed">
+				<a href="#main" data-icon="home">Home</a>
+				<h1>76 Trik Rahasia Blogspot</h1>
+				<a href="LogIn.html" data-icon="user">Log In</a>
+				<div data-role="navbar">
+					<ul>
+						<li><a href ="#bookList" data-transtition="slide">Book List</a></li>
+						<li><a href="#Order">Order</a></li>
+						<li><a href=" ">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			<div data-role="content">
+				<div class="ui-grid-a" >
+					<div class="ui-block-a" >
+						<p> </p>
+						<img src="img/bukublog.jpg" style="width:90%;height:auto;"></img>
+					</div>
+					<div class="ui-block-b" style="font-size:10pt">
+						<p><b>Judul:</b></p>
+						<p>76 Trik Rahasia Blogspot</p>
+						<p><b>Pengarang:</b></p>
+						<p>Jubilee Enterprise</p>
+						<p><b>Stock:</b></p>
+						<p>Tersedia</p>
+						<p><b>Kode:</b></p>
+						 <p style="color:red"><b>TRB</b></p>
+						<p><b>Harga:</b></p>
+						<p>Rp. 75.000</p>
+					</div>
+				</div>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<h4>Meiky W.W. 672010121</h4>
+			</div>
+		</div>	
+		<div data-role="page" id="BKE">
+			<div data-role="header" data-position="fixed">
+				<a href="#main" data-icon="home">Home</a>
+				<h1>Belajar Komputer Edisi Revisi</h1>
+				<a href="LogIn.html" data-icon="user">Log In</a>
+				<div data-role="navbar">
+					<ul>
+						<li><a href ="#bookList" data-transtition="slide">Book List</a></li>
+						<li><a href="#Order">Order</a></li>
+						<li><a href=" ">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			<div data-role="content">
+				<div class="ui-grid-a" >
+					<div class="ui-block-a" >
+						<p> </p>
+						<img src="img/BelajarKomputer.jpg" style="width:90%;height:auto;"></img>
+					</div>
+					<div class="ui-block-b" style="font-size:10pt">
+						<p><b>Judul:</b></p>
+						<p>Belajar Komputer Edisi Revisi</p>
+						<p><b>Pengarang:</b></p>
+						<p>Haer Talib</p>
+						<p><b>Stock:</b></p>
+						<p>Tersedia</p>
+						<p><b>Kode:</b></p>
+						 <p style="color:red"><b>BKE</b></p>
+						<p><b>Harga:</b></p>
+						<p>Rp. 125.000</p>
+					</div>
+				</div>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<h4>Meiky W.W. 672010121</h4>
+			</div>
+		</div>	
+		<div data-role="page" id="DDM">
+			<div data-role="header" data-position="fixed">
+				<a href="#main" data-icon="home">Home</a>
+				<h1>Dasar-Dasar Manajemen Keuangan</h1>
+				<a href="LogIn.html" data-icon="user">Log In</a>
+				<div data-role="navbar">
+					<ul>
+						<li><a href ="#bookList" data-transtition="slide">Book List</a></li>
+						<li><a href="#Order">Order</a></li>
+						<li><a href=" ">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			<div data-role="content">
+				<div class="ui-grid-a" >
+					<div class="ui-block-a" >
+						<p> </p>
+						<img src="img/dasar-dasarManagemenKeuangan.jpg" style="width:90%;height:auto;"></img>
+					</div>
+					<div class="ui-block-b" style="font-size:10pt">
+						<p><b>Judul:</b></p>
+						<p>Dasar-Dasar Manajemen Keuangan</p>
+						<p><b>Pengarang:</b></p>
+						<p>Brigham Houston</p>
+						<p><b>Stock:</b></p>
+						<p>Tersedia</p>
+						<p><b>Kode:</b></p>
+						 <p style="color:red"><b>DDM</b></p>
+						<p><b>Harga:</b></p>
+						<p>Rp. 100.000</p>
+					</div>
+				</div>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<h4>Meiky W.W. 672010121</h4>
+			</div>
+		</div>
+		<div data-role="page" id="DBS">
+			<div data-role="header" data-position="fixed">
+				<a href="#main" data-icon="home">Home</a>
+				<h1>Database Systems</h1>
+				<a href="LogIn.html" data-icon="user">Log In</a>
+				<div data-role="navbar">
+					<ul>
+						<li><a href ="#bookList" data-transtition="slide">Book List</a></li>
+						<li><a href="#Order">Order</a></li>
+						<li><a href=" ">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			<div data-role="content">
+				<div class="ui-grid-a" >
+					<div class="ui-block-a" >
+						<p> </p>
+						<img src="img/databaseSystems.jpg" style="width:90%;height:auto;"></img>
+					</div>
+					<div class="ui-block-b" style="font-size:10pt">
+						<p><b>Judul:</b></p>
+						<p>Database Systems</p>
+						<p><b>Pengarang:</b></p>
+						<p>Thomas Connoly dan Carolyn Begg</p>
+						<p><b>Stock:</b></p>
+						<p>Tersedia</p>
+						<p><b>Kode:</b></p>
+						 <p style="color:red"><b>DBS</b></p>
+						<p><b>Harga:</b></p>
+						<p>Rp. 175.000</p>
+					</div>
+				</div>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<h4>Meiky W.W. 672010121</h4>
+			</div>
+		</div>
+		<div data-role="page" id="KBA">
+			<div data-role="header" data-position="fixed">
+				<a href="#main" data-icon="home">Home</a>
+				<h1>Komputer Bagi Anak</h1>
+				<a href="LogIn.html" data-icon="user">Log In</a>
+				<div data-role="navbar">
+					<ul>
+						<li><a href ="#bookList" data-transtition="slide">Book List</a></li>
+						<li><a href="#Order">Order</a></li>
+						<li><a href=" ">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			<div data-role="content">
+				<div class="ui-grid-a" >
+					<div class="ui-block-a" >
+						<p> </p>
+						<img src="img/komputerAnak.jpg" style="width:90%;height:auto;"></img>
+					</div>
+					<div class="ui-block-b" style="font-size:10pt">
+						<p><b>Judul:</b></p>
+						<p>Komputer Bagi Anak</p>
+						<p><b>Pengarang:</b></p>
+						<p>Tutang ,MM</p>
+						<p><b>Stock:</b></p>
+						<p>Tersedia</p>
+						<p><b>Kode:</b></p>
+						 <p style="color:red"><b>KBA</b></p>
+						<p><b>Harga:</b></p>
+						<p>Rp. 75.000</p>
+					</div>
+				</div>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<h4>Meiky W.W. 672010121</h4>
+			</div>
+		</div>
+		<div data-role="page" id="JRK">
+			<div data-role="header" data-position="fixed">
+				<a href="#main" data-icon="home">Home</a>
+				<h1>Jaringan Komputer</h1>
+				<a href="LogIn.html" data-icon="user">Log In</a>
+				<div data-role="navbar">
+					<ul>
+						<li><a href ="#bookList" data-transtition="slide">Book List</a></li>
+						<li><a href="#Order">Order</a></li>
+						<li><a href=" ">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			<div data-role="content">
+				<div class="ui-grid-a" >
+					<div class="ui-block-a" >
+						<p> </p>
+						<img src="img/langkah-mudah-jarkom.jpg" style="width:90%;height:auto;"></img>
+					</div>
+					<div class="ui-block-b" style="font-size:10pt">
+						<p><b>Judul:</b></p>
+						<p>Jaringan Komputer</p>
+						<p><b>Pengarang:</b></p>
+						<p>Zaenal Arifin</p>
+						<p><b>Stock:</b></p>
+						<p>Tersedia</p>
+						<p><b>Kode:</b></p>
+						 <p style="color:red"><b>JRK</b></p>
+						<p><b>Harga:</b></p>
+						<p>Rp. 135.000</p>
+					</div>
+				</div>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<h4>Meiky W.W. 672010121</h4>
+			</div>
+		</div>
+		<div data-role="page" id="MMD">
+			<div data-role="header" data-position="fixed">
+				<a href="#main" data-icon="home">Home</a>
+				<h1>MultiMedia</h1>
+				<a href="LogIn.html" data-icon="user">Log In</a>
+				<div data-role="navbar">
+					<ul>
+						<li><a href ="#bookList" data-transtition="slide">Book List</a></li>
+						<li><a href="#Order">Order</a></li>
+						<li><a href=" ">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			<div data-role="content">
+				<div class="ui-grid-a" >
+					<div class="ui-block-a" >
+						<p> </p>
+						<img src="img/multimedia.jpg" style="width:90%;height:auto;"></img>
+					</div>
+					<div class="ui-block-b" style="font-size:10pt">
+						<p><b>Judul:</b></p>
+						<p>MultiMedia</p>
+						<p><b>Pengarang:</b></p>
+						<p>Prof. Dr. Munir ,M.IT</p>
+						<p><b>Stock:</b></p>
+						<p>Tersedia</p>
+						<p><b>Kode:</b></p>
+						 <p style="color:red"><b>MMD</b></p>
+						<p><b>Harga:</b></p>
+						<p>Rp. 225.000</p>
+					</div>
+				</div>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<h4>Meiky W.W. 672010121</h4>
+			</div>
+		</div>
+		<div data-role="page" id="RBT">
+			<div data-role="header" data-position="fixed">
+				<a href="#main" data-icon="home">Home</a>
+				<h1>Rahasia Bakat the Talent Code</h1>
+				<a href="LogIn.html" data-icon="user">Log In</a>
+				<div data-role="navbar">
+					<ul>
+						<li><a href ="#bookList" data-transtition="slide">Book List</a></li>
+						<li><a href="#Order">Order</a></li>
+						<li><a href=" ">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			<div data-role="content">
+				<div class="ui-grid-a" >
+					<div class="ui-block-a" >
+						<p> </p>
+						<img src="img/RahasiaBakat.jpg" style="width:90%;height:auto;"></img>
+					</div>
+					<div class="ui-block-b" style="font-size:10pt">
+						<p><b>Judul:</b></p>
+						<p>Rahasia Bakat the Talent Code</p>
+						<p><b>Pengarang:</b></p>
+						<p>Daniel Coyle</p>
+						<p><b>Stock:</b></p>
+						<p>Tersedia</p>
+						<p><b>Kode:</b></p>
+						 <p style="color:red"><b>RBT</b></p>
+						<p><b>Harga:</b></p>
+						<p>Rp. 175.000</p>
+					</div>
+				</div>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<h4>Meiky W.W. 672010121</h4>
+			</div>
+		</div>
+		<div data-role="page" id="RPL">
+			<div data-role="header" data-position="fixed">
+				<a href="#main" data-icon="home">Home</a>
+				<h1>RekayasaPerangkatLunak.png</h1>
+				<a href="LogIn.html" data-icon="user">Log In</a>
+				<div data-role="navbar">
+					<ul>
+						<li><a href ="#bookList" data-transtition="slide">Book List</a></li>
+						<li><a href="#Order">Order</a></li>
+						<li><a href=" ">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			<div data-role="content">
+				<div class="ui-grid-a" >
+					<div class="ui-block-a" >
+						<p> </p>
+						<img src="img/dasar-dasarManagemenKeuangan.jpg" style="width:90%;height:auto;"></img>
+					</div>
+					<div class="ui-block-b" style="font-size:10pt">
+						<p><b>Judul:</b></p>
+						<p>Rekayasa Perangkat Lunak</p>
+						<p><b>Pengarang:</b></p>
+						<p>Aunur Rofiq Mulyanto, DKK.</p>
+						<p><b>Stock:</b></p>
+						<p>Tersedia</p>
+						<p><b>Kode:</b></p>
+						 <p style="color:red"><b>RPL</b></p>
+						<p><b>Harga:</b></p>
+						<p>Rp. 75.000</p>
+					</div>
+				</div>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<h4>Meiky W.W. 672010121</h4>
+			</div>
+		</div>
+		<div data-role="page" id="RBE">
+			<div data-role="header" data-position="fixed">
+				<a href="#main" data-icon="home">Home</a>
+				<h1>Robot B.E.A.M</h1>
+				<a href="LogIn.html" data-icon="user">Log In</a>
+				<div data-role="navbar">
+					<ul>
+						<li><a href ="#bookList" data-transtition="slide">Book List</a></li>
+						<li><a href="#Order">Order</a></li>
+						<li><a href=" ">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			<div data-role="content">
+				<div class="ui-grid-a" >
+					<div class="ui-block-a" >
+						<p> </p>
+						<img src="img/robotBEAM.jpg" style="width:90%;height:auto;"></img>
+					</div>
+					<div class="ui-block-b" style="font-size:10pt">
+						<p><b>Judul:</b></p>
+						<p>Robot B.E.A.M</p>
+						<p><b>Pengarang:</b></p>
+						<p>Taufiq Dwi Septian Suyadhi</p>
+						<p><b>Stock:</b></p>
+						<p>Tersedia</p>
+						<p><b>Kode:</b></p>
+						 <p style="color:red"><b>DDM</b></p>
+						<p><b>Harga:</b></p>
+						<p>Rp. 175.000</p>
+					</div>
+				</div>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<h4>Meiky W.W. 672010121</h4>
+			</div>
+		</div>
+		<div data-role="page" id="TKD">
+			<div data-role="header" data-position="fixed">
+				<a href="#main" data-icon="home">Home</a>
+				<h1>Teknologi Komputer Dalam Bisnis</h1>
+				<a href="LogIn.html" data-icon="user">Log In</a>
+				<div data-role="navbar">
+					<ul>
+						<li><a href ="#bookList" data-transtition="slide">Book List</a></li>
+						<li><a href="#Order">Order</a></li>
+						<li><a href=" ">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			<div data-role="content">
+				<div class="ui-grid-a" >
+					<div class="ui-block-a" >
+						<p> </p>
+						<img src="img/TeknologiKomputerDalamBisnis.jpg" style="width:90%;height:auto;"></img>
+					</div>
+					<div class="ui-block-b" style="font-size:10pt">
+						<p><b>Judul:</b></p>
+						<p>Teknologi Komputer Dalam Bisnis</p>
+						<p><b>Pengarang:</b></p>
+						<p>Wing Wahyu Winarno</p>
+						<p><b>Stock:</b></p>
+						<p>Tersedia</p>
+						<p><b>Kode:</b></p>
+						 <p style="color:red"><b>TKD</b></p>
+						<p><b>Harga:</b></p>
+						<p>Rp. 125.000</p>
+					</div>
+				</div>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<h4>Meiky W.W. 672010121</h4>
+			</div>
+		</div>
+		<div data-role="page" id="WEB">
+			<div data-role="header" data-position="fixed">
+				<a href="#main" data-icon="home">Home</a>
+				<h1>Web 2.0 How to for Educators</h1>
+				<a href="LogIn.html" data-icon="user">Log In</a>
+				<div data-role="navbar">
+					<ul>
+						<li><a href ="#bookList" data-transtition="slide">Book List</a></li>
+						<li><a href="#Order">Order</a></li>
+						<li><a href=" ">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			<div data-role="content">
+				<div class="ui-grid-a" >
+					<div class="ui-block-a" >
+						<p> </p>
+						<img src="img/webHTFE.jpg" style="width:90%;height:auto;"></img>
+					</div>
+					<div class="ui-block-b" style="font-size:10pt">
+						<p><b>Judul:</b></p>
+						<p>Web 2.0 How to for Educators</p>
+						<p><b>Pengarang:</b></p>
+						<p>Gwen Solomon</p>
+						<p><b>Stock:</b></p>
+						<p>Tersedia</p>
+						<p><b>Kode:</b></p>
+						 <p style="color:red"><b>WEB</b></p>
+						<p><b>Harga:</b></p>
+						<p>Rp. 105.000</p>
+					</div>
+				</div>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<h4>Meiky W.W. 672010121</h4>
+			</div>
+		</div>
+		
+			
+			
+	</body>
+</html>
